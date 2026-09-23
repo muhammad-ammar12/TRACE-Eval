@@ -1,0 +1,10 @@
+openai==1.70.0
+python-docx==1.1.2
+pandas==2.2.3
+numpy==2.2.4
+openpyxl==3.1.5
+tenacity==9.1.2
+scipy==1.15.2
+jupyterlab==4.3.6
+ipykernel==6.29.5
+ipywidgets
