@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite TRACE-Eval and include the exact repository commit used."
+type: software
+title: "TRACE-Eval: Traceable reference-aligned evaluation for structured evidence extraction"
+authors:
+  - family-names: Shahid
+    given-names: Muhammad Ammar
+  - family-names: Afzal
+    given-names: Muhammad
+  - family-names: Lokker
+    given-names: Cynthia
+  - family-names: Wu
+    given-names: Wenyan
+  - family-names: Seker
+    given-names: Huseyin
+repository-code: "https://github.com/muhammad-ammar12/TRACE-Eval"
+license: MIT
