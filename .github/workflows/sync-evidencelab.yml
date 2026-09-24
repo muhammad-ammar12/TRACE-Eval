@@ -1,0 +1,28 @@
+name: Sync main to EvidenceXLab
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    if: github.repository == 'muhammad-ammar12/TRACE-Eval'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the complete repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push the same commit to EvidenceXLab
+        env:
+          EVIDENCEXLAB_TOKEN: ${{ secrets.EVIDENCEXLAB_TOKEN }}
+        run: |
+          git remote add evidencelab "https://x-access-token:${EVIDENCEXLAB_TOKEN}@github.com/EvidenceXLab/TRACE-Eval.git"
+          git push evidencelab HEAD:main
